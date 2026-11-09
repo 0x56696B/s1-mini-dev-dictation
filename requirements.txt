@@ -1,0 +1,19 @@
+# Apple Silicon (MLX). Python 3.12 recommended: MLX wheels exist for 3.10-3.14, not 3.15.
+#   uv venv --python 3.12 .venv && uv pip install -r requirements.txt
+# Versions below are the ones the smoke test ran with.
+
+# training + fuse (scripts/train.sh, scripts/fuse_convert.sh)
+mlx-lm==0.31.3
+transformers==5.22.2
+pyyaml==6.0.3
+
+# Hugging Face: `hf` CLI and hub client for the base model download
+huggingface_hub==2.4.0
+
+# GGUF conversion (scripts/fuse_convert.sh runs llama.cpp's convert_hf_to_gguf.py,
+# which imports torch, numpy and gguf; sentencepiece and protobuf are tokenizer helpers)
+gguf==0.19.0
+torch==2.15.0
+numpy==2.5.4
+sentencepiece==0.2.3
+protobuf==7.36.2

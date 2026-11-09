@@ -1,0 +1,9 @@
+{
+  "general.base_models": [
+    {
+      "name": "S1-mini",
+      "organization": "Superwhisper",
+      "repo_url": "https://huggingface.co/superwhisper/s1-mini"
+    }
+  ]
+}

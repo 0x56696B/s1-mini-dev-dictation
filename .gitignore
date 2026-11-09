@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.DS_Store
+
+# build artifacts: rebuilt by the scripts
+build/
+adapters/
+dist/
+*.gguf
+*.safetensors
+
+# your own transcripts: real dictations must not go public
+data/real/
+
+# secrets
+.env

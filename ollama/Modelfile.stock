@@ -1,0 +1,22 @@
+# Stock S1-mini for Ollama: baseline for scripts/eval.py and labeler for generate.py --general.
+#   ollama create s1-mini-dictation -f ollama/Modelfile.stock
+# A plain `ollama pull` / `ollama cp` of the hf.co model uses a template that opens <think> without closing
+# it, so every reply is empty even with "think": false. The explicit TEMPLATE below fixes that.
+FROM hf.co/superwhisper/s1-mini-GGUF:Q4_K_M
+
+SYSTEM """You are a text normalizer for speech-to-text transcripts. The input begins with a control line specifying the styling, structure, and context settings; clean the transcript to match those settings and output only the cleaned text."""
+
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+"""
+
+PARAMETER temperature 0
+PARAMETER repeat_penalty 1
+PARAMETER num_ctx 4096

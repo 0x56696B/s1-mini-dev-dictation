@@ -1,0 +1,730 @@
+# Domain vocabulary for the S1-mini dictation fine-tune. Public terms only.
+# written : exact written form (capitalization matters).
+# spoken  : lowercase ASR-style renderings, incl. spelled letters and likely mishears (olama, queen, marg down, vexer, mac par kit).
+#           Pick one variant per fill. No punctuation, digits spelled out.
+# category: acronym | tool | language | cloud | model | command | path | file | format | company
+terms:
+  # ---- acronym
+  - written: "ADO"
+    spoken: ["a d o", "ay dee oh", "ado"]
+    category: acronym
+  - written: "OMP"
+    spoken: ["omp", "o m p", "oh em pee"]
+    category: acronym
+  - written: "MCP"
+    spoken: ["m c p", "mcp", "em see pee"]
+    category: acronym
+  - written: "LSP"
+    spoken: ["l s p", "lsp"]
+    category: acronym
+  - written: "DAP"
+    spoken: ["d a p", "dap"]
+    category: acronym
+  - written: "API"
+    spoken: ["a p i", "api"]
+    category: acronym
+  - written: "CLI"
+    spoken: ["c l i", "cli"]
+    category: acronym
+  - written: "SSH"
+    spoken: ["s s h", "ssh"]
+    category: acronym
+  - written: "GPU"
+    spoken: ["g p u", "gpu"]
+    category: acronym
+  - written: "CPU"
+    spoken: ["c p u", "cpu"]
+    category: acronym
+  - written: "LLM"
+    spoken: ["l l m", "llm"]
+    category: acronym
+  - written: "PR"
+    spoken: ["p r", "pr"]
+    category: acronym
+  - written: "CI"
+    spoken: ["c i", "ci"]
+    category: acronym
+  - written: "CI/CD"
+    spoken: ["c i c d", "ci cd", "c i slash c d"]
+    category: acronym
+  - written: "SSO"
+    spoken: ["s s o", "sso"]
+    category: acronym
+  - written: "SCIM"
+    spoken: ["s c i m", "scim"]
+    category: acronym
+  - written: "RBAC"
+    spoken: ["r b a c", "rbac"]
+    category: acronym
+  - written: "JWT"
+    spoken: ["j w t", "jwt"]
+    category: acronym
+  - written: "VAD"
+    spoken: ["v a d", "vad"]
+    category: acronym
+  - written: "DER"
+    spoken: ["d e r", "der"]
+    category: acronym
+  - written: "WER"
+    spoken: ["w e r", "wer"]
+    category: acronym
+  - written: "OBO"
+    spoken: ["o b o", "obo"]
+    category: acronym
+  - written: "TTSR"
+    spoken: ["t t s r", "ttsr"]
+    category: acronym
+  - written: "PIM"
+    spoken: ["p i m", "pim"]
+    category: acronym
+  - written: "AVD"
+    spoken: ["a v d", "avd"]
+    category: acronym
+  - written: "NSG"
+    spoken: ["n s g", "nsg"]
+    category: acronym
+  - written: "APIM"
+    spoken: ["a p i m", "apim"]
+    category: acronym
+  - written: "OIDC"
+    spoken: ["o i d c", "oidc"]
+    category: acronym
+  - written: "AAD"
+    spoken: ["a a d", "aad"]
+    category: acronym
+  - written: "E2E"
+    spoken: ["e two e", "e 2 e"]
+    category: acronym
+  - written: "QA"
+    spoken: ["q a", "qa"]
+    category: acronym
+  - written: "UAT"
+    spoken: ["u a t", "uat"]
+    category: acronym
+  - written: "RAG"
+    spoken: ["r a g"]
+    category: acronym
+  - written: "STT"
+    spoken: ["s t t", "stt"]
+    category: acronym
+  - written: "ASR"
+    spoken: ["a s r", "asr"]
+    category: acronym
+  - written: "ONNX"
+    spoken: ["onnx", "onyx", "o n n x"]
+    category: acronym
+  - written: "RAM"
+    spoken: ["ram", "r a m"]
+    category: acronym
+  - written: "LoRA"
+    spoken: ["lora", "laura", "l o r a"]
+    category: acronym
+  - written: "GSM8K"
+    spoken: ["gsm eight k", "g s m eight k"]
+    category: acronym
+  # ---- format
+  - written: "YAML"
+    spoken: ["yaml", "yamel", "y a m l"]
+    category: format
+  - written: "JSON"
+    spoken: ["json", "j s o n"]
+    category: format
+  - written: "TOML"
+    spoken: ["toml", "t o m l"]
+    category: format
+  - written: "CSV"
+    spoken: ["c s v", "csv"]
+    category: format
+  - written: "PPTX"
+    spoken: ["p p t x"]
+    category: format
+  - written: "DOCX"
+    spoken: ["d o c x", "doc x"]
+    category: format
+  - written: "WAV"
+    spoken: ["wav", "w a v"]
+    category: format
+  - written: "GGUF"
+    spoken: ["gguf", "g g u f"]
+    category: format
+  - written: "Markdown"
+    spoken: ["markdown", "marg down", "mark down"]
+    category: format
+  - written: "Q4_K_M"
+    spoken: ["q four k m", "q 4 k m"]
+    category: format
+  - written: "Q8_0"
+    spoken: ["q eight zero", "q eight underscore zero"]
+    category: format
+  # ---- language
+  - written: "Python"
+    spoken: ["python"]
+    category: language
+  - written: "TypeScript"
+    spoken: ["typescript", "type script"]
+    category: language
+  - written: "JavaScript"
+    spoken: ["javascript", "java script"]
+    category: language
+  - written: "Lua"
+    spoken: ["lua"]
+    category: language
+  - written: "Go"
+    spoken: ["go"]
+    category: language
+  - written: "C#"
+    spoken: ["c sharp"]
+    category: language
+  - written: "Rust"
+    spoken: ["rust"]
+    category: language
+  - written: "Bash"
+    spoken: ["bash"]
+    category: language
+  - written: "SQL"
+    spoken: ["sql", "s q l"]
+    category: language
+  # ---- cloud
+  - written: "Azure"
+    spoken: ["azure"]
+    category: cloud
+  - written: "Azure DevOps"
+    spoken: ["azure devops", "azure dev ops"]
+    category: cloud
+  - written: "Azure OpenAI"
+    spoken: ["azure openai", "azure open ai"]
+    category: cloud
+  - written: "Azure AI Foundry"
+    spoken: ["azure ai foundry", "azure a i foundry"]
+    category: cloud
+  - written: "Azure Load Testing"
+    spoken: ["azure load testing"]
+    category: cloud
+  - written: "Azure Virtual Desktop"
+    spoken: ["azure virtual desktop"]
+    category: cloud
+  - written: "Azure Blob Storage"
+    spoken: ["azure blob storage"]
+    category: cloud
+  - written: "Azure Pipelines"
+    spoken: ["azure pipelines"]
+    category: cloud
+  - written: "Azure Monitor"
+    spoken: ["azure monitor"]
+    category: cloud
+  - written: "Azure CLI"
+    spoken: ["azure cli", "azure c l i"]
+    category: cloud
+  - written: "Entra ID"
+    spoken: ["entra id", "entra i d"]
+    category: cloud
+  - written: "App Service"
+    spoken: ["app service"]
+    category: cloud
+  - written: "Application Gateway"
+    spoken: ["application gateway"]
+    category: cloud
+  - written: "App Gateway"
+    spoken: ["app gateway"]
+    category: cloud
+  - written: "VNet"
+    spoken: ["v net", "vnet"]
+    category: cloud
+  # ---- tool
+  - written: "OpenWhispr"
+    spoken: ["openwhispr", "open whisper", "open whispr"]
+    category: tool
+  - written: "MacParakeet"
+    spoken: ["macparakeet", "mac parakeet", "mac par kit", "macparkit"]
+    category: tool
+  - written: "whisper.cpp"
+    spoken: ["whisper dot c p p", "whisper cpp", "whisper dot cpp"]
+    category: tool
+  - written: "llama.cpp"
+    spoken: ["llama dot c p p", "llama cpp"]
+    category: tool
+  - written: "WhisperX"
+    spoken: ["whisper x", "whisperx"]
+    category: tool
+  - written: "sherpa-onnx"
+    spoken: ["sherpa on x", "sherpa onyx", "sherpa dash onnx"]
+    category: tool
+  - written: "pyannote"
+    spoken: ["pie annote", "pyannote", "pi annote"]
+    category: tool
+  - written: "Ollama"
+    spoken: ["ollama", "olama", "olamma", "allama"]
+    category: tool
+  - written: "Ghostty"
+    spoken: ["ghostty", "ghosty"]
+    category: tool
+  - written: "WezTerm"
+    spoken: ["wezterm", "wez term", "wes term"]
+    category: tool
+  - written: "tmux"
+    spoken: ["tmux", "tee mux", "t mux"]
+    category: tool
+  - written: "Neovim"
+    spoken: ["neovim", "neo vim"]
+    category: tool
+  - written: "LazyVim"
+    spoken: ["lazyvim", "lazy vim"]
+    category: tool
+  - written: "lazy.nvim"
+    spoken: ["lazy dot n vim", "lazy dot nvim"]
+    category: tool
+  - written: "zsh"
+    spoken: ["zsh", "z s h", "zee shell"]
+    category: tool
+  - written: "AeroSpace"
+    spoken: ["aerospace", "aero space"]
+    category: tool
+  - written: "yabai"
+    spoken: ["yabai", "ya bye", "yabi"]
+    category: tool
+  - written: "skhd"
+    spoken: ["skhd", "s k h d"]
+    category: tool
+  - written: "Hammerspoon"
+    spoken: ["hammerspoon", "hammer spoon"]
+    category: tool
+  - written: "Homebrew"
+    spoken: ["homebrew", "home brew"]
+    category: tool
+  - written: "Colima"
+    spoken: ["colima", "co lima"]
+    category: tool
+  - written: "Docker"
+    spoken: ["docker"]
+    category: tool
+  - written: "Git"
+    spoken: ["git"]
+    category: tool
+  - written: "Ansible"
+    spoken: ["ansible", "an sible"]
+    category: tool
+  - written: "Terraform"
+    spoken: ["terraform", "terra form"]
+    category: tool
+  - written: "Grafana"
+    spoken: ["grafana"]
+    category: tool
+  - written: "Loki"
+    spoken: ["loki"]
+    category: tool
+  - written: "Prometheus"
+    spoken: ["prometheus"]
+    category: tool
+  - written: "Promtail"
+    spoken: ["promtail", "prom tail"]
+    category: tool
+  - written: "OpenTelemetry"
+    spoken: ["opentelemetry", "open telemetry"]
+    category: tool
+  - written: "OTel"
+    spoken: ["otel", "o tel"]
+    category: tool
+  - written: "k3d"
+    spoken: ["k three d", "k 3 d"]
+    category: tool
+  - written: "Bun"
+    spoken: ["bun"]
+    category: tool
+  - written: "npm"
+    spoken: ["npm", "n p m"]
+    category: tool
+  - written: "uv"
+    spoken: ["uv", "u v"]
+    category: tool
+  - written: "pytest"
+    spoken: ["pytest", "pie test"]
+    category: tool
+  - written: "Playwright"
+    spoken: ["playwright", "play write", "play wright"]
+    category: tool
+  - written: "Checkmarx"
+    spoken: ["checkmarx", "check marx"]
+    category: tool
+  - written: "Lighthouse"
+    spoken: ["lighthouse"]
+    category: tool
+  - written: "axe-core"
+    spoken: ["axe core", "ax core"]
+    category: tool
+  - written: "Locust"
+    spoken: ["locust"]
+    category: tool
+  - written: "Vexa"
+    spoken: ["vexa", "vexer", "vex a"]
+    category: tool
+  - written: "Catppuccin"
+    spoken: ["catppuccin", "cat puccin"]
+    category: tool
+  - written: "Obsidian"
+    spoken: ["obsidian"]
+    category: tool
+  - written: "Slack"
+    spoken: ["slack"]
+    category: tool
+  - written: "Microsoft Teams"
+    spoken: ["microsoft teams"]
+    category: tool
+  - written: "Brave"
+    spoken: ["brave"]
+    category: tool
+  - written: "Claude Code"
+    spoken: ["claude code", "cloud code"]
+    category: tool
+  - written: "Claude"
+    spoken: ["claude"]
+    category: tool
+  - written: "Codex"
+    spoken: ["codex"]
+    category: tool
+  - written: "Bitwarden"
+    spoken: ["bitwarden", "bit warden"]
+    category: tool
+  - written: "MongoDB"
+    spoken: ["mongodb", "mongo db", "mongo d b"]
+    category: tool
+  - written: "SQLite"
+    spoken: ["sqlite", "sequel lite", "s q lite"]
+    category: tool
+  - written: "Node.js"
+    spoken: ["node dot js", "node js", "nodejs"]
+    category: tool
+  - written: "pyright"
+    spoken: ["pyright", "pie right"]
+    category: tool
+  - written: "debugpy"
+    spoken: ["debugpy", "debug pie"]
+    category: tool
+  - written: "uvicorn"
+    spoken: ["uvicorn", "u v icorn"]
+    category: tool
+  - written: "vitest"
+    spoken: ["vitest", "vi test"]
+    category: tool
+  - written: "pwa-chrome"
+    spoken: ["pwa chrome", "p w a chrome"]
+    category: tool
+  - written: "Metal"
+    spoken: ["metal"]
+    category: tool
+  - written: "CUDA"
+    spoken: ["cuda", "kuda"]
+    category: tool
+  - written: "Vulkan"
+    spoken: ["vulkan", "vulcan"]
+    category: tool
+  - written: "CoreML"
+    spoken: ["coreml", "core ml", "core m l"]
+    category: tool
+  - written: "MLX"
+    spoken: ["mlx", "m l x"]
+    category: tool
+  # ---- model
+  - written: "Qwen"
+    spoken: ["queen", "quen", "qwen"]
+    category: model
+  - written: "Qwen3.5-4B"
+    spoken: ["queen three point five four b", "qwen three point five four b", "quen three point five four b"]
+    category: model
+  - written: "Qwen3.5-9B"
+    spoken: ["queen three point five nine b", "qwen three point five nine b"]
+    category: model
+  - written: "Qwen3.5-2B"
+    spoken: ["queen three point five two b", "qwen three point five two b"]
+    category: model
+  - written: "Qwen2.5-1.5B"
+    spoken: ["qwen two point five one point five b", "queen two point five one point five b"]
+    category: model
+  - written: "Qwen3-0.6B"
+    spoken: ["queen three zero point six b", "qwen three zero point six b"]
+    category: model
+  - written: "mlx-community/Qwen3.5-4B-MLX-4bit"
+    spoken: ["mlx community slash queen three point five four b mlx four bit", "mlx dash community slash qwen three point five four b dash mlx dash four bit"]
+    category: model
+  - written: "unsloth/Qwen3.5-9B-GGUF"
+    spoken: ["unsloth slash queen three point five nine b gguf", "unsloth slash qwen three point five nine b dash gguf"]
+    category: model
+  - written: "S1-mini"
+    spoken: ["s one mini", "s one dash mini"]
+    category: model
+  - written: "superwhisper/s1-mini-GGUF"
+    spoken: ["superwhisper slash s one mini gguf", "super whisper slash s one mini dash gguf"]
+    category: model
+  - written: "Whisper"
+    spoken: ["whisper"]
+    category: model
+  - written: "Whisper large-v3"
+    spoken: ["whisper large v three", "whisper large dash v three"]
+    category: model
+  - written: "Whisper large-v3-turbo"
+    spoken: ["whisper large v three turbo", "whisper large dash v three dash turbo"]
+    category: model
+  - written: "Parakeet"
+    spoken: ["parakeet"]
+    category: model
+  - written: "Parakeet v3"
+    spoken: ["parakeet v three"]
+    category: model
+  - written: "CAM++"
+    spoken: ["cam plus plus"]
+    category: model
+  - written: "Hermes-3-Llama-3.1-8B"
+    spoken: ["hermes three llama three point one eight b", "hermes dash three dash llama dash three point one dash eight b"]
+    category: model
+  - written: "GPT-4o"
+    spoken: ["gpt four o", "g p t four o"]
+    category: model
+  - written: "GPT-5.5"
+    spoken: ["gpt five point five", "g p t five point five"]
+    category: model
+  # ---- command
+  - written: "ansible-playbook --check --diff"
+    spoken: ["ansible playbook dash dash check dash dash diff", "ansible dash playbook dash dash check dash dash diff"]
+    category: command
+  - written: "ansible-vault edit"
+    spoken: ["ansible vault edit", "an sible vault edit"]
+    category: command
+  - written: "mlx_lm.server"
+    spoken: ["mlx lm dot server", "mlx underscore lm dot server"]
+    category: command
+  - written: "mlx_lm.lora"
+    spoken: ["mlx lm dot lora", "mlx underscore lm dot lora"]
+    category: command
+  - written: "llama-server"
+    spoken: ["llama server", "llama dash server"]
+    category: command
+  - written: "ollama create"
+    spoken: ["ollama create", "olama create"]
+    category: command
+  - written: "ollama run"
+    spoken: ["ollama run", "olama run", "allama run"]
+    category: command
+  - written: "ollama ps"
+    spoken: ["ollama p s", "olama p s"]
+    category: command
+  - written: "ollama pull"
+    spoken: ["ollama pull", "olama pull"]
+    category: command
+  - written: "hf download"
+    spoken: ["hf download", "h f download"]
+    category: command
+  - written: "yabai -m rule"
+    spoken: ["yabai dash m rule", "yabai m rule"]
+    category: command
+  - written: "tmux new-session"
+    spoken: ["tmux new session", "tee mux new dash session"]
+    category: command
+  - written: "git worktree add"
+    spoken: ["git worktree add", "git work tree add"]
+    category: command
+  - written: "git clone --bare"
+    spoken: ["git clone dash dash bare"]
+    category: command
+  - written: "git submodule update --init"
+    spoken: ["git submodule update dash dash init"]
+    category: command
+  - written: "git check-ignore -v"
+    spoken: ["git check ignore dash v", "git check dash ignore dash v"]
+    category: command
+  - written: "git commit -m"
+    spoken: ["git commit dash m"]
+    category: command
+  - written: "colima start --vz-rosetta"
+    spoken: ["colima start dash dash vz dash rosetta"]
+    category: command
+  - written: "docker compose"
+    spoken: ["docker compose"]
+    category: command
+  - written: "omp --resume"
+    spoken: ["omp dash dash resume"]
+    category: command
+  - written: "omp plugin list"
+    spoken: ["omp plugin list"]
+    category: command
+  - written: "/advisor status"
+    spoken: ["slash advisor status"]
+    category: command
+  - written: "/advisor dump raw"
+    spoken: ["slash advisor dump raw"]
+    category: command
+  - written: "/hotkeys"
+    spoken: ["slash hotkeys"]
+    category: command
+  - written: "/reload-plugins"
+    spoken: ["slash reload plugins", "slash reload dash plugins"]
+    category: command
+  - written: "/exit"
+    spoken: ["slash exit"]
+    category: command
+  - written: "pbcopy"
+    spoken: ["pb copy", "p b copy"]
+    category: command
+  - written: "pbpaste"
+    spoken: ["pb paste", "p b paste"]
+    category: command
+  - written: "launchctl bootout"
+    spoken: ["launch c t l bootout", "launchctl bootout"]
+    category: command
+  - written: "pgrep -a"
+    spoken: ["p grep dash a", "pgrep dash a"]
+    category: command
+  - written: "kill -9"
+    spoken: ["kill dash nine", "kill nine"]
+    category: command
+  - written: "uv run"
+    spoken: ["uv run", "u v run"]
+    category: command
+  - written: "uv sync"
+    spoken: ["uv sync", "u v sync"]
+    category: command
+  - written: "curl -X POST"
+    spoken: ["curl dash x post", "curl dash capital x post"]
+    category: command
+  - written: "tail -f"
+    spoken: ["tail dash f"]
+    category: command
+  - written: "brew install"
+    spoken: ["brew install"]
+    category: command
+  - written: "az login"
+    spoken: ["az login", "a z login"]
+    category: command
+  # ---- path
+  - written: "~/.omp/agent"
+    spoken: ["tilde slash dot omp slash agent"]
+    category: path
+  - written: ".omp"
+    spoken: ["dot omp", "dotomp"]
+    category: path
+  - written: "~/.agents/skills"
+    spoken: ["tilde slash dot agents slash skills"]
+    category: path
+  - written: "~/.config/tmux/scripts"
+    spoken: ["tilde slash dot config slash tmux slash scripts"]
+    category: path
+  - written: "~/.config/nvim"
+    spoken: ["tilde slash dot config slash n vim", "tilde slash dot config slash nvim"]
+    category: path
+  - written: "~/.config/colima"
+    spoken: ["tilde slash dot config slash colima"]
+    category: path
+  - written: "~/.zshrc"
+    spoken: ["tilde slash dot zshrc", "tilde slash dot z s h r c"]
+    category: path
+  - written: "~/.zprofile"
+    spoken: ["tilde slash dot zprofile"]
+    category: path
+  - written: "~/.local/bin"
+    spoken: ["tilde slash dot local slash bin"]
+    category: path
+  - written: "~/.cache/huggingface"
+    spoken: ["tilde slash dot cache slash huggingface", "tilde slash dot cache slash hugging face"]
+    category: path
+  - written: "vault://_/schema.md"
+    spoken: ["vault colon slash slash underscore slash schema dot md"]
+    category: path
+  - written: "vault://wiki/"
+    spoken: ["vault colon slash slash wiki slash"]
+    category: path
+  - written: "dev.azure.com"
+    spoken: ["dev dot azure dot com"]
+    category: path
+  - written: "huggingface.co/superwhisper/s1-mini"
+    spoken: ["hugging face dot co slash superwhisper slash s one mini", "huggingface dot co slash superwhisper slash s one mini"]
+    category: path
+  - written: "https://github.com/ollama/ollama"
+    spoken: ["https colon slash slash github dot com slash ollama slash ollama", "https colon slash slash github dot com slash olama slash olama"]
+    category: path
+  - written: "localhost:11434"
+    spoken: ["local host colon eleven four three four", "localhost colon eleven four three four"]
+    category: path
+  # ---- file
+  - written: "README.md"
+    spoken: ["readme dot m d", "readme dot md", "read me dot md"]
+    category: file
+  - written: "WATCHDOG.yml"
+    spoken: ["watchdog dot yml", "watchdog dot y m l"]
+    category: file
+  - written: "WATCHDOG.md"
+    spoken: ["watchdog dot md", "watchdog dot m d"]
+    category: file
+  - written: "CLAUDE.md"
+    spoken: ["claude dot md", "cloud dot md"]
+    category: file
+  - written: "APPEND_SYSTEM.md"
+    spoken: ["append system dot md", "append underscore system dot md"]
+    category: file
+  - written: "TITLE_SYSTEM.md"
+    spoken: ["title system dot md", "title underscore system dot md"]
+    category: file
+  - written: "schema.md"
+    spoken: ["schema dot md"]
+    category: file
+  - written: "yabairc"
+    spoken: ["yabairc", "yabai r c"]
+    category: file
+  - written: "aerospace.toml"
+    spoken: ["aerospace dot toml"]
+    category: file
+  - written: "config.lua"
+    spoken: ["config dot lua"]
+    category: file
+  - written: "config.yml"
+    spoken: ["config dot yml", "config dot y m l"]
+    category: file
+  - written: "models.yml"
+    spoken: ["models dot yml"]
+    category: file
+  - written: "keybindings.yml"
+    spoken: ["keybindings dot yml", "key bindings dot yml"]
+    category: file
+  - written: "mcp.json"
+    spoken: ["mcp dot json", "m c p dot json"]
+    category: file
+  - written: ".omp/mcp.json"
+    spoken: ["dot omp slash mcp dot json"]
+    category: file
+  - written: "package.json"
+    spoken: ["package dot json"]
+    category: file
+  - written: "pyproject.toml"
+    spoken: ["py project dot toml", "pyproject dot toml"]
+    category: file
+  - written: "docker-compose.yml"
+    spoken: ["docker compose dot yml", "docker dash compose dot yml"]
+    category: file
+  - written: ".gitignore"
+    spoken: ["dot git ignore", "dot gitignore"]
+    category: file
+  - written: ".env.local"
+    spoken: ["dot env dot local"]
+    category: file
+  - written: "Dockerfile"
+    spoken: ["docker file", "dockerfile"]
+    category: file
+  - written: "tmux.conf"
+    spoken: ["tmux dot conf", "tee mux dot conf"]
+    category: file
+  # ---- company
+  - written: "Anthropic"
+    spoken: ["anthropic"]
+    category: company
+  - written: "OpenAI"
+    spoken: ["openai", "open ai", "open a i"]
+    category: company
+  - written: "Hugging Face"
+    spoken: ["hugging face"]
+    category: company
+  - written: "Superwhisper"
+    spoken: ["superwhisper", "super whisper"]
+    category: company
+  - written: "Microsoft"
+    spoken: ["microsoft"]
+    category: company
+  - written: "GitHub"
+    spoken: ["github", "git hub"]
+    category: company

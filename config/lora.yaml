@@ -1,0 +1,29 @@
+# mlx_lm.lora config, used by scripts/train.sh (LoRA on every linear layer of all 28 blocks).
+# Run through scripts/train.py: mlx-lm forces enable_thinking=True for Qwen3 tokenizers, which
+# would put the empty <think> block inside the loss. train.py switches that off. See README.
+
+model: superwhisper/s1-mini       # base weights; downloaded into the Hugging Face cache on first use
+train: true
+fine_tune_type: lora
+num_layers: -1                    # -1 = all layers
+data: build/mlx                   # train.jsonl + valid.jsonl from scripts/build_dataset.py
+adapter_path: adapters
+mask_prompt: true                 # loss only on the completion (cleaned text + <|im_end|>)
+
+# mlx-lm multiplies the LoRA branch by `scale` directly (no alpha/rank), so scale x learning_rate
+# sets the step size. 4.0 x 1e-4 = 4e-4 matches the common PEFT recipe (r=16, alpha=32, lr=2e-4).
+lora_parameters:
+  rank: 16
+  scale: 4.0
+  dropout: 0.05
+learning_rate: 1.0e-4
+
+# 4 epochs: scripts/train.sh sets iters = EPOCHS x train_rows / batch_size (override with EPOCHS= or ITERS=).
+iters: 300
+batch_size: 8                     # 0.6B model, rows are short: a few GB of the 18 GB
+max_seq_length: 1024
+val_batches: -1                   # score the whole (small) validation set
+steps_per_report: 10
+steps_per_eval: 50
+save_every: 100
+seed: 0

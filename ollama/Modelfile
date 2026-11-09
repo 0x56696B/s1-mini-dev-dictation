@@ -1,0 +1,36 @@
+# S1-mini-dev-dictation for Ollama (Q4_K_M build from scripts/fuse_convert.sh).
+#   ollama create s1-mini-dev -f ollama/Modelfile
+# FROM is resolved relative to this file.
+#
+# Call /api/chat with "think": false (or "reasoning_effort": "none" on /v1) and send the user message as
+# "<control line>\n<raw transcript>", for example
+#   [Styling: semi-formal] [Structure: prose] [Context: general]
+#   so the a d o ticket needs updating
+# SYSTEM is used when the request has no system message of its own.
+#
+# Ollama 0.40 (runner: llamacpp) renders the chat template stored in the GGUF, which is S1-mini's own, and
+# think:false makes it add the empty think block. It ignores the TEMPLATE below (checked with a Modelfile
+# whose TEMPLATE hard-coded another user message). TEMPLATE stays for Ollama versions that use it: it gives
+# the same prompt as training.
+FROM ../dist/gguf/S1-mini-dev-dictation-Q4_K_M.gguf
+
+# Fixed by S1-mini: same text as prompts/system-s1.txt.
+SYSTEM """You are a text normalizer for speech-to-text transcripts. The input begins with a control line specifying the styling, structure, and context settings; clean the transcript to match those settings and output only the cleaned text."""
+
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+"""
+
+# Greedy decoding, no repetition penalty: the task copies most input words.
+PARAMETER temperature 0
+PARAMETER repeat_penalty 1
+PARAMETER num_ctx 4096
+PARAMETER stop <|im_end|>
+PARAMETER stop <|im_start|>
